@@ -45,7 +45,7 @@ class MySpecialTree():
         return result
 
 if __name__ == "__main__":
-    values = [1, 8, 3, 0, 4, 2, 9]
+    values = [1, 8, 3, 0, 4, 2, 9,]
     k = 3
     myTree = MySpecialTree(values)
     print(myTree.data)
