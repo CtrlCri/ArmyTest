@@ -1,3 +1,27 @@
+# W**orking with arrays**
+
+# Python (coding): working with arrays
+
+This Python coding test evaluates candidates’ ability to work with arrays. The test gives candidates 30 minutes to create a short algorithm involving arrays while taking into consideration all the requirements provided.
+
+## **Covered skills**
+
+Working with arrays
+
+## **This test is relevant for**
+
+Developers with practical experience using Python.
+
+## **Description**
+
+Python is a high-level, general-purpose language that can be used in anything from web development to data science and machine learning. As an open-source programming language with a strong community, Python offers an expansive library of resources such as web frameworks, testing instruments, and data analysis tools. 
+
+One of the skills required of good Python developers is working with arrays. Arrays are special variables that hold collections of related values. Arrays allow developers to work with a large number of variables quickly and efficiently. 
+
+This test assesses candidates’ skills in working with Python arrays. The test provides candidates with a task description in the appropriate context and specifies the algorithms that need to be developed and the requirements to satisfy. It also provides a few examples to illustrate how the function should behave and asks candidates to solve the task. You can see a complete and functional example of a task by clicking the “preview questions” tab on this page. 
+
+Candidates can run their code to see if certain pre-defined inputs return the expected result. The test is scored automatically using a different set of test cases, which include more challenging corner cases. Once the test is complete, you can inspect the code of the candidate and play it back to interpret their thought process. You can also see the efficiency of the code shown in the results.
+
 ## 01 Treasure Hunter
 
 You are a treasure hunter and you've recently discovered a map that indicates how many precious items are located in every city on the map. Although you would like to find as many treasures as possible, you are fearful of going into a city that is heavily guarded. You will get caught by the guards and be sent to jail.
