@@ -1,1 +1,5 @@
 venv/
+.env
+core/__pycache__/
+core/__pycache1__/
+tasklist/__pycache1__/
