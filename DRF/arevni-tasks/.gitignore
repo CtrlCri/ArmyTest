@@ -3,3 +3,4 @@ venv/
 core/__pycache__/
 core/__pycache1__/
 tasklist/__pycache1__/
+tasklist/__pycache__/
