@@ -1,0 +1,34 @@
+# Version of docker-compose to use 
+version: 'v2.12.0'
+
+services:
+  app: # This is the service for the Django application
+    build: . # Sets the directory containing a Dockerfile 
+
+    command: python /app/manage.py runserver 0.0.0.0:8000
+    volumes:
+    # Copy changes made to the project to image working directory as changes are made
+      - .:/app
+    ports:
+      - 8000:8000
+    environment:
+      # The environment variable credentials that is needed 
+      # in django settings for Postgres to work.
+      - DB_HOST=db
+      - DB_NAME=app2
+      - DB_USER=postgres3
+      - DB_PASS=supersecretpassword
+    depends_on:
+      - db
+  db:
+    image: postgres:15.1-alpine # pulling Postgres image from Docker hub
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      # credentials required by postgres image
+      - POSTGRES_DB=app2
+      - POSTGRES_USER=postgres3
+      - POSTGRES_PASSWORD=supersecretpassword
+
+volumes:
+  postgres_data:
