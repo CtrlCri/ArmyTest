@@ -1,5 +1,5 @@
 # Version of docker-compose to use 
-version: 'v2.12.0'
+version: '3.8'
 
 services:
   app: # This is the service for the Django application
