@@ -1,29 +1,29 @@
 # Código en Python que implementa el generador automático de la canción "Sal de ahí chivita" y calcula el tiempo esperado de ejecución para diferentes valores de N:
 import random
 
-animales = ["el lobo", "el toro", ...]  # 100 animales
-LlamarA = {}
+ANIMALES = ["el lobo", "el toro", ...]  # 100 animales
+LLAMAR_A = {}
 
-def elemento_random(lista):
+def obtener_elemento_aleatorio(lista):
     return random.choice(lista)
 
-def generador_cancion(N):
+def generar_cancion(N):
     print("Sal de ahí chivita chivita, sal de ahí de ese lugar")
     actualmente = "la chiva"
 
     tiempo_ejecucion = 0  # Variable para almacenar el tiempo de ejecución total
 
     for _ in range(N):
-        prox = elemento_random(animales)
-        LlamarA[actualmente] = prox
-        print("Hay que llamar a " + prox + " para que saque a " + actualmente)
+        prox = obtener_elemento_aleatorio(ANIMALES)
+        LLAMAR_A[actualmente] = prox
+        print(f"Hay que llamar a {prox} para que saque a {actualmente}")
         actualmente = prox
         remover = []
         inspeccionar = "la chiva"
 
-        while inspeccionar not in LlamarA:
-            remover.insert(0, LlamarA[inspeccionar] + " no quiere sacar a " + inspeccionar)
-            inspeccionar = LlamarA[inspeccionar]
+        while inspeccionar not in LLAMAR_A:
+            remover.insert(0, f"{LLAMAR_A[inspeccionar]} no quiere sacar a {inspeccionar}")
+            inspeccionar = LLAMAR_A[inspeccionar]
 
         for i in remover:
             print(i)
@@ -35,10 +35,8 @@ def generador_cancion(N):
 
     return tiempo_ejecucion
 
-
-if __name__ == '__main__':
-    # Calcular el tiempo esperado de ejecución para diferentes valores de N
-    N_valores = [1, 10, 50, 200]
-    for N in N_valores:
-        tiempo_esperado = generador_cancion(N)
-        print(f"Tiempo esperado de ejecución para N={N}: {tiempo_esperado} ms")
+# Calcular el tiempo esperado de ejecución para diferentes valores de N
+N_VALORES = [1, 10, 50, 200]
+for N in N_VALORES:
+    tiempo_esperado = generar_cancion(N)
+    print(f"Tiempo esperado de ejecución para N={N}: {tiempo_esperado} ms")
