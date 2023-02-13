@@ -35,8 +35,10 @@ def generador_cancion(N):
 
     return tiempo_ejecucion
 
-# Calcular el tiempo esperado de ejecución para diferentes valores de N
-N_valores = [1, 10, 50, 200]
-for N in N_valores:
-    tiempo_esperado = generador_cancion(N)
-    print(f"Tiempo esperado de ejecución para N={N}: {tiempo_esperado} ms")
+
+if __name__ == '__main__':
+    # Calcular el tiempo esperado de ejecución para diferentes valores de N
+    N_valores = [1, 10, 50, 200]
+    for N in N_valores:
+        tiempo_esperado = generador_cancion(N)
+        print(f"Tiempo esperado de ejecución para N={N}: {tiempo_esperado} ms")
