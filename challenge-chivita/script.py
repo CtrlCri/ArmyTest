@@ -13,7 +13,7 @@ ANIMALES = ["perro", "gato", "elefante", "león", "tigre", "jirafa",
     "morsa", "orca", "foca", "hipocampo", "medusa", "anguila", "caballito de mar",
     "pollo", "gallina", "cabrito", "gallina", "avestruz", "cocodrilo",
     "tortuga", "grillo", "lucio", "pavo", "ratón", "topo", "búho", "abeja",
-    "chivita", "dromedario", "elefante", "flamenco", "gaviota", "hipopótamo",
+    "chivito", "dromedario", "elefante", "flamenco", "gaviota", "hipopótamo",
     "iguana", "jaguar", "koala", "lagartija", "mono", "nutria", "oso",
     "puma", "quetzal", "ratón", "serpiente", "tigre", "uapití", "vaca",
     "yak", "zebra"]  # 100 animales
@@ -52,7 +52,7 @@ def generar_cancion(N):
 
 # Calcular el tiempo esperado de ejecución para diferentes valores de N
 if __name__ == "__main__":
-    N = 10 #, 10, 50, 200
+    N = 3 #, 10, 50, 200
 
     tiempo_esperado = generar_cancion(N)
     print(f"Tiempo esperado de ejecución para N={N}: {tiempo_esperado} ms")
