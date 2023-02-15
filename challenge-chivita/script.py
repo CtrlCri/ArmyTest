@@ -27,6 +27,9 @@ N = 3  # Número de repeticiones
 for _ in range(N):
     prox = random.choice(animales)
     LlamarA[actualmente] = prox
+    
+    print(LlamarA)
+    
     animales.remove(prox)
     print(f"Hay que llamar a {prox} para que saque a {actualmente}")
     actualmente = prox
