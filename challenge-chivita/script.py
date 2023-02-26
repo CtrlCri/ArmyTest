@@ -1,43 +1,34 @@
 import random
 
-animales = ["perro", "gato", "elefante", "león", "tigre", "jirafa",
-    "mono", "ardilla", "conejo", "ratón", "hámster", "serpiente",
-    "cocodrilo", "pingüino", "tortuga", "canguro", "koala", "hipopótamo",
-    "rinoceronte", "camello", "cebra", "murciélago", "búho", "águila",
-    "loro", "tucán", "pato", "cisne", "pollo", "gallo", "vaca", "caballo",
-    "oveja", "cerdo", "conejo", "rana", "pulpo", "ballena", "delfín",
-    "tiburón", "pez espada", "salmón", "tortuga marina", "caracol",
-    "mariposa", "abeja", "mosca", "araña", "escorpión", "saltamontes",
-    "hormiga", "araña", "ciervo", "oso", "zorro", "mapache", "castor",
-    "morsa", "orca", "foca", "hipocampo", "medusa", "anguila", "caballito de mar",
-    "pollo", "gallina", "cabrito", "gallina", "avestruz", "cocodrilo",
-    "tortuga", "grillo", "lucio", "pavo", "ratón", "topo", "búho", "abeja",
-    "chivito", "dromedario", "elefante", "flamenco", "gaviota", "hipopótamo",
-    "iguana", "jaguar", "koala", "lagartija", "mono", "nutria", "oso",
-    "puma", "quetzal", "ratón", "serpiente", "tigre", "uapití", "vaca",
-    "yak", "zebra"]  # 100 animales
-
-LlamarA = {}
+animales = ["el lobo", "el toro", "elefante", "león", "tigre", "jirafa", "mono", "ardilla", "conejo", "ratón", "hámster", "serpiente",
+            "cocodrilo", "pingüino", "tortuga", "canguro", "koala", "hipopótamo", "rinoceronte", "camello", "cebra", "murciélago",
+            "búho", "águila", "loro", "tucán", "pato", "cisne", "pollo", "gallo", "vaca", "caballo", "oveja", "cerdo", "conejo",
+            "rana", "pulpo", "ballena", "delfín", "tiburón", "pez espada", "salmón", "tortuga marina", "caracol", "mariposa", "abeja",
+            "mosca", "araña", "escorpión", "saltamontes", "hormiga", "araña", "ciervo", "oso", "zorro", "mapache", "castor", "morsa",
+            "orca", "foca", "hipocampo", "medusa", "anguila", "caballito de mar", "pollo", "gallina", "cabrito", "gallina", "avestruz",
+            "cocodrilo", "tortuga", "grillo", "lucio", "pavo", "ratón", "topo", "búho", "abeja", "chivito", "dromedario", "elefante",
+            "flamenco", "gaviota", "hipopótamo", "iguana", "jaguar", "koala", "lagartija", "mono", "nutria", "oso", "puma", "quetzal",
+            "ratón", "serpiente", "tigre", "uapití", "vaca", "yak", "zebra"]
 
 print("Sal de ahí chivita chivita, sal de ahí de ese lugar")
+
 actualmente = "la chiva"
+llamar_a = {}
 
-N = 3  # Número de repeticiones
-
-for _ in range(N):
+for _ in range(3):
     prox = random.choice(animales)
-    LlamarA[actualmente] = prox
-    
-    print(LlamarA)
-    
-    animales.remove(prox)
-    print(f"Hay que llamar a {prox} para que saque a {actualmente}")
+    llamar_a[actualmente] = prox
+    print("Hay que llamar a", prox, "para que saque a", actualmente)
     actualmente = prox
+
     remover = []
     inspeccionar = "la chiva"
-    while inspeccionar not in LlamarA:
-        remover.insert(0, f"{LlamarA[inspeccionar]} no quiere sacar a {inspeccionar}")
-        inspeccionar = LlamarA[inspeccionar]
+    
+    while inspeccionar not in llamar_a:
+        remover.insert(0, llamar_a[inspeccionar] + " no quiere sacar a " + inspeccionar)
+        inspeccionar = llamar_a[inspeccionar]
+    
     for i in remover:
         print(i)
+    
     print("La chiva no quiere salir de ahí. Sal de ahí chivita chivita, sal de ahí de ese lugar")
