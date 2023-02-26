@@ -16,7 +16,7 @@ actualmente = "la chiva"
 llamar_a = {}
 
 N = 3
-
+contador = 4
 for _ in range(N):
     prox = random.choice(animales)
     llamar_a[actualmente] = prox
@@ -25,12 +25,14 @@ for _ in range(N):
 
     remover = []
     inspeccionar = "la chiva"
-    
+    contador = contador + 9
     while inspeccionar in llamar_a:
         remover.append(f" {llamar_a[inspeccionar]} no quiere sacar a {inspeccionar}")
         inspeccionar = llamar_a[inspeccionar]
-    
+        contador = contador + 4
     for i in reversed(remover):
         print(i)
-    
+        contador = contador + 3
     print("La chiva no quiere salir de ahí. Sal de ahí chivita chivita, sal de ahí de ese lugar")
+
+print(contador)
