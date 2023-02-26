@@ -15,7 +15,9 @@ print("Sal de ahí chivita chivita, sal de ahí de ese lugar")
 actualmente = "la chiva"
 llamar_a = {}
 
-for _ in range(3):
+N = 3
+
+for _ in range(N):
     prox = random.choice(animales)
     llamar_a[actualmente] = prox
     print("Hay que llamar a", prox, "para que saque a", actualmente)
@@ -24,11 +26,11 @@ for _ in range(3):
     remover = []
     inspeccionar = "la chiva"
     
-    while inspeccionar not in llamar_a:
-        remover.insert(0, llamar_a[inspeccionar] + " no quiere sacar a " + inspeccionar)
+    while inspeccionar in llamar_a:
+        remover.append(f" {llamar_a[inspeccionar]} no quiere sacar a {inspeccionar}")
         inspeccionar = llamar_a[inspeccionar]
     
-    for i in remover:
+    for i in reversed(remover):
         print(i)
     
     print("La chiva no quiere salir de ahí. Sal de ahí chivita chivita, sal de ahí de ese lugar")
