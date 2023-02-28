@@ -15,7 +15,7 @@ print("Sal de ahí chivita chivita, sal de ahí de ese lugar")
 actualmente = "la chiva"
 llamar_a = {}
 
-N = 20 #N = 1, 10, --> 50? y 200? Memoria insuficiente
+N = 10 #N = 1, 10 ... // 20? 50? y 200? Memoria insuficiente
 contador = 4
 for _ in range(N):
     prox = random.choice(animales)
