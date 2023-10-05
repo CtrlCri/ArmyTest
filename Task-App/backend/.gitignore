@@ -1,0 +1,7 @@
+venv/
+app/.env
+app/apicore/__pycache__/
+app/tasks/__pycache__/
+app/users/__pycache__/
+app/tasks/migrations/__pycache__/
+app/users/migrations/__pycache__/
